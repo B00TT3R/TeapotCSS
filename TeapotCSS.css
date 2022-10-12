@@ -1,0 +1,64 @@
+[data-tp-grid] {
+	--defaultColumns: 12;
+	--rowItems: var(--columns, var(--defaultColumns));
+	--defaultGap: 0px;
+	--gapCalc: var(--gap, var(--defaultGap));
+	display: grid;
+	grid-template-columns: repeat(var(--defaultColumns), 1fr);
+	grid-gap: var(--gapCalc);
+	grid-auto-rows: auto;
+}
+
+[data-tp-grid] > * {
+	--defaultParte: 1;
+	--defaultParteY: 1;
+	--parteCalc: var(--parte, var(--defaultParte));
+	--parteYCalc: var(--parteY, var(--defaultParteY));
+	box-sizing: border-box;
+	grid-column: span var(--parteCalc);
+	grid-row: span var(--parteYCalc);
+	height: var(--height, auto);
+}
+
+[data-tp-grid] > * > * {
+	--gap: initial;
+	--columns: initial;
+}
+
+[data-tp-grid=auto] {
+	gap: var(--gapCalc);
+	display: flex;
+	flex-wrap: wrap;
+}
+
+[data-tp-party][data-tp-party] {
+	--heightCalc: var(--height, auto);
+	--heightMultiplied: calc(var(--defaultParteY) * var(--heightCalc));
+	--gapXParteY: calc(var(--gapCalc) * (var(--defaultParteY) - 1));
+	height: calc(var(--heightMultiplied) + var(--gapXParteY));
+}
+
+[data-tp-grid][data-tp-flexgrid] {
+	display: flex;
+	flex-wrap: wrap;
+	--defaultColumns: 12;
+	--rowItems: var(--columns, var(--defaultColumns));
+	--defaultGap: 0px;
+	--gapCalc: var(--gap, var(--defaultGap));
+	gap: var(--gapCalc);
+}
+
+[data-tp-grid][data-tp-flexgrid] > * {
+	--defaultParte: 1;
+	--parteCalc: var(--parte, var(--defaultParte));
+	--colLocal: calc(var(--rowItems) / var(--parteCalc));
+	--rowThis: var(--colLocal, var(--rowItems));
+	--semGap: calc(100% - (var(--gapCalc) * var(--rowThis)));
+	width: calc(var(--semGap) / var(--rowThis));
+	box-sizing: border-box;
+}
+
+[data-tp-grid][data-tp-flexgrid] > * > * {
+	--gap: initial;
+	--columns: initial;
+}

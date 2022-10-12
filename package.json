@@ -1,0 +1,17 @@
+{
+  "name": "teapotcss",
+  "version": "1.0.0",
+  "description": "Biblioteca para grades em CSS",
+  "main": "TeapotCSS.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bot",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.21"
+  }
+}
