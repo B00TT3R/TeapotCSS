@@ -9,7 +9,6 @@ interface propsContainer extends React.HTMLAttributes<HTMLDivElement>{
     gap?: string;
     columns?: string|number;
     flexGrid?: boolean;
-    
 }
 function setVar(element:HTMLDivElement, rawValue:string, propName:CSSVarName){
     const breakpoints = [576, 768, 992, 1200, 1400];
