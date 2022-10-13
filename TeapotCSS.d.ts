@@ -13,3 +13,5 @@ interface propsChild extends React.HTMLAttributes<HTMLDivElement>{
     parts?: string|number;
     partY?: string|number;
 }
+
+export { CSSVarName,CSSvars,propsContainer,propsChild };

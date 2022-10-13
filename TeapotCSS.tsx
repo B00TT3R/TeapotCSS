@@ -1,6 +1,6 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect,  useRef} from 'react';
 import './TeapotCSS.css'
-
+import {propsContainer, propsChild, CSSvars, CSSVarName} from './TeapotCSS.d'
 function setVar(element:HTMLDivElement, rawValue:string, propName:CSSVarName){
     const breakpoints = [576, 768, 992, 1200, 1400];
     if(rawValue.startsWith('[') && rawValue.endsWith(']')){
@@ -39,7 +39,9 @@ function addStyle(element:HTMLDivElement, rawValue:string, propName:CSSVarName){
         resizeListener(element, rawValue, propName)
     }
 }
-function Container({children, gap, columns,flexGrid, ...props}:propsContainer){        
+function Container({children, gap, columns,flexGrid, ...props}:propsContainer){
+    
+    
     const styles:CSSvars = {
         "--defaultGap": gap,
         "--defaultColumns": columns
