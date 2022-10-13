@@ -56,8 +56,8 @@ function Container({children, gap, columns,flexGrid, ...props}:propsContainer){
     const father = useRef(null);
     useEffect(()=>{
         const observador = new MutationObserver(()=>{
-            let gridElement:any = father.current;
-            let gridAttribute = gridElement!.dataset.tpGrid
+            let gridElement:HTMLDivElement = father.current!;
+            let gridAttribute = gridElement!.dataset.tpGrid!
             let gapAttribute = gridElement!.dataset.tpGap        
             if(!['auto', 'manual'].includes(gridAttribute)){
                 addStyle(gridElement, gridAttribute, '--defaultColumns')
