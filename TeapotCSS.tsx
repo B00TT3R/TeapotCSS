@@ -1,15 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import './TeapotCSS.css'
-type CSSVarName = `--${string}`;
-interface CSSvars{
-    [key:CSSVarName]:string|number|undefined;
-}
-interface propsContainer extends React.HTMLAttributes<HTMLDivElement>{
-    children?: React.ReactNode;
-    gap?: string;
-    columns?: string|number;
-    flexGrid?: boolean;
-}
+
 function setVar(element:HTMLDivElement, rawValue:string, propName:CSSVarName){
     const breakpoints = [576, 768, 992, 1200, 1400];
     if(rawValue.startsWith('[') && rawValue.endsWith(']')){
@@ -89,12 +80,7 @@ function Container({children, gap, columns,flexGrid, ...props}:propsContainer){
         </>
     )
 }
-interface propsChild extends React.HTMLAttributes<HTMLDivElement>{
-    children?: React.ReactNode;
-    parts?: string|number;
-    partY?: string|number;
-    
-}
+
 function Child({children,parts, partY, ...props}:propsChild){
     const styles:CSSvars = {
         "--defaultParte": parts,
