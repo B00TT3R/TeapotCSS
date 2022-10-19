@@ -30,7 +30,6 @@
 	display: flex;
 	flex-wrap: wrap;
 }
-
 [data-tp-party][data-tp-party] {
 	--heightCalc: var(--height, auto);
 	--heightMultiplied: calc(var(--defaultParteY) * var(--heightCalc));

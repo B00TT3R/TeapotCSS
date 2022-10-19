@@ -1,4 +1,4 @@
-type CSSVarName = `--${string}`;
+type CSSVarName = `--${Uncapitalize<string>}`;
 interface CSSvars{
     [key:CSSVarName]:string|number|undefined;
 }
@@ -13,5 +13,4 @@ interface propsChild extends React.HTMLAttributes<HTMLDivElement>{
     parts?: string|number;
     partY?: string|number;
 }
-
 export { CSSVarName,CSSvars,propsContainer,propsChild };
