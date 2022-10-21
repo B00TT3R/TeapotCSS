@@ -5,12 +5,12 @@ interface CSSvars{
 interface propsContainer extends React.HTMLAttributes<HTMLDivElement>{
     children?: React.ReactNode;
     gap?: string;
-    columns?: string|number;
+    columns?: string;
     flexGrid?: boolean;
 }
 interface propsChild extends React.HTMLAttributes<HTMLDivElement>{
     children?: React.ReactNode;
-    parts?: string|number;
-    partY?: string|number;
+    parts?: string;
+    partY?: string;
 }
 export { CSSVarName,CSSvars,propsContainer,propsChild };
