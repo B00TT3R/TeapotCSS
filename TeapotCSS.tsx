@@ -124,7 +124,7 @@ function Child({children,parts, partY, ...props}:propsChild){
     return(
             <div
                 data-tp-part={parts}
-                data-tp-partY={partY}
+                data-tp-party={partY}
                 ref={element}
                 {...props}
                 style={styles}
