@@ -4,7 +4,7 @@
 	--defaultGap: 0px;
 	--gapCalc: var(--gap, var(--defaultGap));
 	display: grid;
-	grid-template-columns: repeat(var(--defaultColumns), 1fr);
+	grid-template-columns: repeat(var(--rowItems), 1fr);
 	grid-gap: var(--gapCalc);
 	grid-auto-rows: auto;
 }
