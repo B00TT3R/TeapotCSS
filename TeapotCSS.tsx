@@ -1,4 +1,3 @@
-import { setMaxListeners } from 'events';
 import React, {useEffect, useRef, useState} from 'react';
 import './TeapotCSS.css'
 import {propsContainer, propsChild, CSSvars, CSSVarName} from './TeapotCSS.d'
